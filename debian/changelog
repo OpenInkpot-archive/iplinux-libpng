@@ -1,3 +1,9 @@
+libpng (1.2.35-1.ip2) asimov; urgency=high
+
+  * Added quilt dependency
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sun, 15 Mar 2009 00:15:29 +0100
+
 libpng (1.2.35-1.ip1) asimov; urgency=high
 
   * First IPlinux build

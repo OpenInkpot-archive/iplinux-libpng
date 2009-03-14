@@ -2,8 +2,8 @@ Source: libpng
 Section: gui
 Priority: optional
 Maintainer: Alexander Kerner <lunohod@openinkpot.org>
-Build-Depends: debhelper (>= 5), zlib1g-dev | libz1-dev, mawk, libtool, automake, autoconf
-XCS-Cross-Host-Build-Depends: debhelper (>= 5), libtool, automake, autoconf, mawk
+Build-Depends: debhelper (>= 5), zlib1g-dev | libz1-dev, mawk, libtool, automake, autoconf, quilt
+XCS-Cross-Host-Build-Depends: debhelper (>= 5), libtool, automake, autoconf, mawk, quilt
 XCS-Cross-Build-Depends: libz1-dev
 Standards-Version: 3.8.0
 Format: 3.0 (native)
