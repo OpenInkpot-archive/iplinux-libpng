@@ -1,3 +1,9 @@
+libpng (1.2.35-1.ip1) asimov; urgency=high
+
+  * First IPlinux build
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 14 Mar 2009 21:50:36 +0000
+
 libpng (1.2.35-1) unstable; urgency=high
 
   * New upstream release

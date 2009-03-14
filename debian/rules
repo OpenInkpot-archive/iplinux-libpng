@@ -58,10 +58,10 @@ binary-indep: build install
 	dh_testdir -i
 	dh_testroot -i
 	dh_link -i
-	dh_installchangelogs CHANGES -i
-	dh_installdocs -i
+#	dh_installchangelogs CHANGES -i
+#	dh_installdocs -i
 	dh_install --sourcedir=debian/tmp -i
-	dh_installman -i
+#	dh_installman -i
 	dh_strip -i
 	dh_compress -i
 	dh_fixperms -i
@@ -75,15 +75,15 @@ binary-arch: build install
 	dh_testdir -a
 	dh_testroot -a
 	dh_link -a
-	dh_installchangelogs -a CHANGES
-	dh_installdocs -a
-	dh_installexamples -plibpng12-dev example.c pngtest.c pngtest.png
+#	dh_installchangelogs -a CHANGES
+#	dh_installdocs -a
+#	dh_installexamples -plibpng12-dev example.c pngtest.c pngtest.png
 	dh_install --sourcedir=debian/tmp -a
-	dh_installman -a
+#	dh_installman -a
 	dh_strip -a
 	dh_compress -a
 	dh_fixperms -a
-	dh_makeshlibs --add-udeb=libpng12-0-udeb -a
+	dh_makeshlibs -a
 	dh_installdeb -a
 	dh_shlibdeps -a
 	dh_gencontrol -a

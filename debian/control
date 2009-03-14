@@ -1,14 +1,16 @@
 Source: libpng
-Section: libs
+Section: gui
 Priority: optional
-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Uploaders: Sam Hocevar (Debian packages) <sam+deb@zoy.org>
-Build-Depends: debhelper (>= 5), libtool, automake, autoconf, quilt (>= 0.40), zlib1g-dev, mawk
+Maintainer: Alexander Kerner <lunohod@openinkpot.org>
+Build-Depends: debhelper (>= 5), zlib1g-dev | libz1-dev, mawk, libtool, automake, autoconf
+XCS-Cross-Host-Build-Depends: debhelper (>= 5), libtool, automake, autoconf, mawk
+XCS-Cross-Build-Depends: libz1-dev
 Standards-Version: 3.8.0
+Format: 3.0 (native)
 Homepage: http://www.libpng.org/pub/png/libpng.html
 
 Package: libpng12-0
-Section: libs
+Section: gui
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: libpng12-dev (<= 1.2.8rel-7), mzscheme (<= 1:209-5), pngcrush (<= 1.5.10-2), pngmeta (<= 1.11-3), qemacs (<= 0.3.1-5), povray-3.5 (<= 3.5.0c-10)
@@ -23,7 +25,7 @@ Description: PNG library - runtime
 Package: libpng12-dev
 Section: libdevel
 Architecture: any
-Depends: libpng12-0 (= ${binary:Version}), zlib1g-dev
+Depends: libpng12-0 (= ${binary:Version}), libz1-dev
 Conflicts: libpng2-dev, libpng-dev, libpng12-0-dev, libpng2 (<< 1.0.12-3)
 Provides: libpng-dev, libpng12-0-dev, libpng3-dev
 Replaces: libpng3-dev (<= 1.2.5), libpng12-0-dev
@@ -34,26 +36,26 @@ Description: PNG library - development
  This package contains the header and development files needed to build
  programs and packages using libpng.
 
-Package: libpng3
-Section: oldlibs
-Architecture: all
-Depends: libpng12-0 (>= 1.2.5.0-2)
-Description: PNG library - runtime
- libpng is a library implementing an interface for reading and writing
- PNG (Portable Network Graphics) format files.
- .
- This package is superseded by libpng12-0, and is provided only for
- transitional purposes.
-
-Package: libpng12-0-udeb
-XC-Package-Type: udeb
-Section: debian-installer
-Priority: extra
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: PNG library - minimal runtime library
- libpng is a library implementing an interface for reading and writing
- PNG (Portable Network Graphics) format files.
- .
- This package provides the minimal libpng12 runtime library needed for
- the debian-installer.
+#Package: libpng3
+#Section: oldlibs
+#Architecture: all
+#Depends: libpng12-0 (>= 1.2.5.0-2)
+#Description: PNG library - runtime
+# libpng is a library implementing an interface for reading and writing
+# PNG (Portable Network Graphics) format files.
+# .
+# This package is superseded by libpng12-0, and is provided only for
+# transitional purposes.
+#
+#Package: libpng12-0-udeb
+#XC-Package-Type: udeb
+#Section: debian-installer
+#Priority: extra
+#Architecture: any
+#Depends: ${shlibs:Depends}, ${misc:Depends}
+#Description: PNG library - minimal runtime library
+# libpng is a library implementing an interface for reading and writing
+# PNG (Portable Network Graphics) format files.
+# .
+# This package provides the minimal libpng12 runtime library needed for
+# the debian-installer.
