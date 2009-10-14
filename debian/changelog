@@ -1,3 +1,10 @@
+libpng (1.2.40-1) asimov; urgency=low
+
+  * New upstream release.
+  * Packaging cleanup.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Wed, 14 Oct 2009 08:06:31 +0700
+
 libpng (1.2.35-1.ip2+b1) asimov; urgency=high
 
   * Rebuild with new toolchain.
