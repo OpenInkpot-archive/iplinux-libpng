@@ -2,11 +2,11 @@ Source: libpng
 Section: gui
 Priority: optional
 Maintainer: Alexander Kerner <lunohod@openinkpot.org>
-Build-Depends: debhelper (>= 5), zlib1g-dev | libz1-dev, mawk, libtool, automake, autoconf, quilt
-XCS-Cross-Host-Build-Depends: debhelper (>= 5), libtool, automake, autoconf, mawk, quilt
+Uploaders: Mikhail Gusarov <dottedmag@dottedmag.net>
+Build-Depends: debhelper (>= 7), mawk, libtool, automake, autoconf, quilt, zlib1g-dev
+XCS-Cross-Host-Build-Depends: debhelper (>= 7), mawk, libtool, automake, autoconf, quilt
 XCS-Cross-Build-Depends: libz1-dev
-Standards-Version: 3.8.0
-Format: 3.0 (native)
+Standards-Version: 3.8.3
 Homepage: http://www.libpng.org/pub/png/libpng.html
 
 Package: libpng12-0
