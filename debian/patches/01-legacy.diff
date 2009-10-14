@@ -1,6 +1,6 @@
---- libpng-1.2.35/libpng-1.2.35.txt
-+++ libpng-1.2.35/libpng-1.2.35.txt
-@@ -929,8 +929,9 @@
+--- a/libpng-1.2.40.txt
++++ b/libpng-1.2.40.txt
+@@ -978,8 +978,9 @@
      gray = (rw*red + gw*green + bw*blue)/65536;
  
  The default values approximate those recommended in the Charles
@@ -12,30 +12,8 @@
  
      Y = 0.212671 * R + 0.715160 * G + 0.072169 * B
  
---- libpng-1.2.26/png.h
-+++ libpng-1.2.26/png.h
-@@ -1773,7 +1773,8 @@
-    png_ptr_ptr, png_infopp info_ptr_ptr, png_infopp end_info_ptr_ptr));
- 
- /* free all memory used by the read (old method - NOT DLL EXPORTED) */
--extern void png_read_destroy PNGARG((png_structp png_ptr, png_infop info_ptr,
-+/* Debian note: exporting as it is required by legacy applications */
-+extern PNG_EXPORT(void,png_read_destroy) PNGARG((png_structp png_ptr, png_infop info_ptr,
-    png_infop end_info_ptr));
- 
- /* free any memory associated with the png_struct and the png_info_structs */
-@@ -1781,7 +1782,8 @@
-    PNGARG((png_structpp png_ptr_ptr, png_infopp info_ptr_ptr));
- 
- /* free any memory used in png_ptr struct (old method - NOT DLL EXPORTED) */
--extern void png_write_destroy PNGARG((png_structp png_ptr));
-+/* Debian note: exporting as it is required by legacy applications */
-+extern PNG_EXPORT(void,png_write_destroy) PNGARG((png_structp png_ptr));
- 
- /* set the libpng method of handling chunk CRC errors */
- extern PNG_EXPORT(void,png_set_crc_action) PNGARG((png_structp png_ptr,
---- libpng-1.2.26/png.5
-+++ libpng-1.2.26/png.5
+--- a/png.5
++++ b/png.5
 @@ -18,7 +18,11 @@
  platforms.
  
